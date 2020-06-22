@@ -1,0 +1,1 @@
+g++ -o "/home/pi/projects/CANLogger/bin/ARM/Release/CANLogger.out" -Wl,--no-undefined -Wl,-z,relro -Wl,-z,now -Wl,-z,noexecstack /home/pi/projects/CANLogger/obj/ARM/Release/main.o

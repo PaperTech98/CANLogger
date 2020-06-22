@@ -1,0 +1,4 @@
+﻿  Validating sources
+  Copying sources remotely to '192.168.0.34'
+  Validating architecture
+C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Application Type\Linux\1.0\Linux.targets(151,5): error : Current project architecture 'x64' is incompatible with the remote system architecture 'ARM' ('ARM'). Please switch the project architecture to 'ARM' in Configuration Manager.

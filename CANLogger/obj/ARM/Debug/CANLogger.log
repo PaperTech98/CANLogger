@@ -1,0 +1,8 @@
+﻿  Validating sources
+  Copying sources remotely to '192.168.0.34'
+  Validating architecture
+  Starting remote build
+  Compiling sources:
+  main.cpp
+  Linking objects
+  CANLogger.vcxproj -> C:\Users\Samuel\source\repos\CANLogger\CANLogger\bin\ARM\Debug\CANLogger.out
