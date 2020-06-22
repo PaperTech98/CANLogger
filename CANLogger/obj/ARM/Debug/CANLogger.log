@@ -4,5 +4,8 @@
   Starting remote build
   Compiling sources:
   main.cpp
+C:\Users\Samuel\source\repos\CANLogger\CANLogger\main.cpp(18,9): warning : unused variable ‘nbytes’ [-Wunused-variable]
+C:\Users\Samuel\source\repos\CANLogger\CANLogger\main.cpp(18,9): warning :   int s, nbytes;
+C:\Users\Samuel\source\repos\CANLogger\CANLogger\main.cpp(18,9): warning :          ^~~~~~
   Linking objects
   CANLogger.vcxproj -> C:\Users\Samuel\source\repos\CANLogger\CANLogger\bin\ARM\Debug\CANLogger.out
