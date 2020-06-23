@@ -4,8 +4,7 @@
   Starting remote build
   Compiling sources:
   main.cpp
-C:\Users\Samuel\source\repos\CANLogger\CANLogger\main.cpp(18,9): warning : unused variable ‘nbytes’ [-Wunused-variable]
-C:\Users\Samuel\source\repos\CANLogger\CANLogger\main.cpp(18,9): warning :   int s, nbytes;
-C:\Users\Samuel\source\repos\CANLogger\CANLogger\main.cpp(18,9): warning :          ^~~~~~
-  Linking objects
-  CANLogger.vcxproj -> C:\Users\Samuel\source\repos\CANLogger\CANLogger\bin\ARM\Debug\CANLogger.out
+/usr/include/libxml2/libxml/xinclude.h(16,10): error : libxml/xmlversion.h: No such file or directory
+/usr/include/libxml2/libxml/xinclude.h(16,10): error :  #include <libxml/xmlversion.h>
+/usr/include/libxml2/libxml/xinclude.h(16,10): error :           ^~~~~~~~~~~~~~~~~~~~~
+/usr/include/libxml2/libxml/xinclude.h(16,10): error : compilation terminated.

@@ -10,9 +10,17 @@
 #include <linux/can.h>
 #include <linux/can/raw.h>
 
+#include <libxml/tree.h>
+#include <libxml/parser.h>
+
+
 int main()
 {
-    printf("hello from CANLogger!\n");
+	//TODO create logiing functions to change color
+	printf("\033[0;32m");//green
+
+	printf("hello from CANLogger!\n");
+	printf("\033[0m");
 
 	int ret;
 	int s, nbytes;
@@ -54,7 +62,23 @@ int main()
 
 
 
+	//4.Define receive rules
+	struct can_filter rfilter[1];
+	//rfilter[0].can_id = 0x123;
+	//rfilter[0].can_mask = CAN_SFF_MASK;
+	setsockopt(s, SOL_CAN_RAW, CAN_RAW_FILTER, &rfilter, sizeof(rfilter));
 
+	//5.Receive data and exit
+	while (0) {
+		nbytes = read(s, &frame, sizeof(frame));
+		if (nbytes > 0) {
+			printf("can_id = 0x%X\r\ncan_dlc = %d \r\n", frame.can_id, frame.can_dlc);
+			int i = 0;
+			for (i = 0; i < 8; i++)
+				printf("data[%d] = %d\r\n", i, frame.data[i]);
+			break;
+		}
+	}
 
 
 
