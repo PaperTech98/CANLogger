@@ -2,92 +2,46 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#include <string.h>
-#include <unistd.h>
-#include <net/if.h>
-#include <sys/ioctl.h>
-#include <sys/socket.h>
-#include <linux/can.h>
-#include <linux/can/raw.h>
 
-#include <libxml/tree.h>
-#include <libxml/parser.h>
+//#include <libxml/tree.h>
+//#include <libxml/parser.h>
+
+#include "LogColour.h"
+
+#include "CANSocket.h"
+#include "CANAgent.h"
 
 
 int main()
 {
-	//TODO create logiing functions to change color
-	printf("\033[0;32m");//green
-
+	LogGreen();
 	printf("hello from CANLogger!\n");
-	printf("\033[0m");
+	ResetLogColour();
 
-	int ret;
-	int s, nbytes;
-	struct sockaddr_can addr;
-	struct ifreq ifr;
-	struct can_frame frame;
+	//TODO Pass BaudRate Here?
+	//open CAN socket
+	CANSocket Socket = CANSocket();
 
-	memset(&frame, 0, sizeof(struct can_frame));
+	//Create Agent and pass it the socket and XML definitions
+	CANAgent Agent  = CANAgent(&Socket);
 
-	//TODO pull baudrate from an XML FILE rather than hardcoding it in
-	system("sudo ip link set can0 type can bitrate 100000");
-	system("sudo ifconfig can0 up");
+	//TODO
+	//Create Program Modules giving a reference to the CAN Agent to direct all CAN enquires to
 
 
-	//1.Create socket
-	s = socket(PF_CAN, SOCK_RAW, CAN_RAW);
-	if (s < 0) {
-		perror("socket PF_CAN failed");
-		return 1;
-	}
+	//notify socket to start reading Can Packets and hence the agent will notify the modules of packets recieved
 
-	//2.Specify can0 device
-	strcpy(ifr.ifr_name, "can0");
-	ret = ioctl(s, SIOCGIFINDEX, &ifr);
-	if (ret < 0) {
-		perror("ioctl failed");
-		return 1;
-	}
-
-	//3.Bind the socket to can0
-	addr.can_family = PF_CAN;
-	addr.can_ifindex = ifr.ifr_ifindex;
-	ret = bind(s, (struct sockaddr *)&addr, sizeof(addr));
-	if (ret < 0) {
-		perror("bind failed");
-		return 1;
-	}
+	
+	//TODO Decide if a tick function call is needed here
 
 
+	//Close CAN Socket
+	Socket.CloseSocket();
 
-
-	//4.Define receive rules
-	struct can_filter rfilter[1];
-	//rfilter[0].can_id = 0x123;
-	//rfilter[0].can_mask = CAN_SFF_MASK;
-	setsockopt(s, SOL_CAN_RAW, CAN_RAW_FILTER, &rfilter, sizeof(rfilter));
-
-	//5.Receive data and exit
-	while (0) {
-		nbytes = read(s, &frame, sizeof(frame));
-		if (nbytes > 0) {
-			printf("can_id = 0x%X\r\ncan_dlc = %d \r\n", frame.can_id, frame.can_dlc);
-			int i = 0;
-			for (i = 0; i < 8; i++)
-				printf("data[%d] = %d\r\n", i, frame.data[i]);
-			break;
-		}
-	}
-
-
-
-
-	//6.Close the socket and can0
-	close(s);
-	system("sudo ifconfig can0 down");
-
+	//terminate program
+	LogRed();
 	printf("Shutting Down\n");
+	ResetLogColour();
 
     return 0;
 }
