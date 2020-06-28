@@ -1,10 +1,14 @@
 C:\Users\Samuel\source\repos\CANLogger\CANLogger\CANAgent.cpp|/home/pi/projects/CANLogger/CANAgent.cpp
 C:\Users\Samuel\source\repos\CANLogger\CANLogger|/home/pi/projects/CANLogger
 @C:\Users\Samuel\source\repos\CANLogger\CANLogger|@/home/pi/projects/CANLogger
+C:\Users\Samuel\source\repos\CANLogger\CANLogger\CANChannel.cpp|/home/pi/projects/CANLogger/CANChannel.cpp
+C:\Users\Samuel\source\repos\CANLogger\CANLogger\CANModule.cpp|/home/pi/projects/CANLogger/CANModule.cpp
 C:\Users\Samuel\source\repos\CANLogger\CANLogger\CANSocket.cpp|/home/pi/projects/CANLogger/CANSocket.cpp
 C:\Users\Samuel\source\repos\CANLogger\CANLogger\main.cpp|/home/pi/projects/CANLogger/main.cpp
 C:\Users\Samuel\source\repos\CANLogger\CANLogger\LogColour.cpp|/home/pi/projects/CANLogger/LogColour.cpp
 C:\Users\Samuel\source\repos\CANLogger\CANLogger\CANAgent.h|/home/pi/projects/CANLogger/CANAgent.h
+C:\Users\Samuel\source\repos\CANLogger\CANLogger\CANChannel.h|/home/pi/projects/CANLogger/CANChannel.h
+C:\Users\Samuel\source\repos\CANLogger\CANLogger\CANModule.h|/home/pi/projects/CANLogger/CANModule.h
 C:\Users\Samuel\source\repos\CANLogger\CANLogger\CANSocket.h|/home/pi/projects/CANLogger/CANSocket.h
 C:\Users\Samuel\source\repos\CANLogger\CANLogger\LogColour.h|/home/pi/projects/CANLogger/LogColour.h
 C:\Users\Samuel\source\repos\CANLogger\CANLogger\packages.config|/home/pi/projects/CANLogger/packages.config

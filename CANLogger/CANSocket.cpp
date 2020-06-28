@@ -6,17 +6,21 @@
 
 
 
+#include "CANAgent.h"
+
 #include "LogColour.h"
 
-CANSocket::CANSocket() {
+CANSocket::CANSocket(int BaudRate) {
 
 	LogYellow();
 	printf("Opening CAN Socket\n");
 	ResetLogColour();
 
+	system("sudo ifconfig can0 down");
+
 	memset(&frame, 0, sizeof(struct can_frame));
 
-	//TODO pull baudrate from an XML FILE rather than hardcoding it in
+	//TODO pull baudrate from parameter 
 	system("sudo ip link set can0 type can bitrate 100000");
 	system("sudo ifconfig can0 up");
 
@@ -57,15 +61,45 @@ CANSocket::CANSocket() {
 	//rfilter[0].can_mask = CAN_SFF_MASK;
 	setsockopt(s, SOL_CAN_RAW, CAN_RAW_FILTER, &rfilter, sizeof(rfilter));
 
-	//5.Receive data and exit
-	while (0) {
+
+}
+
+CANSocket::~CANSocket()
+{
+	this->CloseSocket();
+}
+
+void CANSocket::notifyAgent(CANAgent * MyAgent)
+{
+	this->MyAgent = MyAgent;
+	AgentNotification = false;
+}
+
+void CANSocket::StartCANRead()
+{
+	//Receive data and exit
+	while (true) {
 		nbytes = read(s, &frame, sizeof(frame));
 		if (nbytes > 0) {
+			//TODO remove print here into own CAN Module
 			printf("can_id = 0x%X\r\ncan_dlc = %d \r\n", frame.can_id, frame.can_dlc);
-			int i = 0;
-			for (i = 0; i < 8; i++)
+			for (int i = 0; i < 8; i++){		
 				printf("data[%d] = %d\r\n", i, frame.data[i]);
-			break;
+			}
+
+			if (this->MyAgent) //CASE: The CAN socket has been provided with an agent
+			{
+				MyAgent->RecieveFrame(&frame);
+			}
+			else if(!AgentNotification) //CASE: No Agent provided and user has not been notified 
+			{
+				LogRed();
+				printf("CAN Socket has not been provided with a CAN Agent, CAN Frames will not be Interpreted!!!\n");
+				AgentNotification = true;
+			}
+
+			//Reset Can Frame
+			memset(&frame, 0, sizeof(struct can_frame));
 		}
 	}
 }

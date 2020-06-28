@@ -10,7 +10,11 @@
 class CANSocket
 {
 public:
-	CANSocket(); //Constructor
+	CANSocket(int BaudRate); //Constructor
+	~CANSocket();
+
+	void notifyAgent(class CANAgent* MyAgent);
+	void StartCANRead();
 
 	void CloseSocket();
 
@@ -20,5 +24,7 @@ private:
 	struct sockaddr_can addr;
 	struct ifreq ifr;
 	struct can_frame frame;
-
+	
+	CANAgent * MyAgent;
+	bool AgentNotification = false;
 };

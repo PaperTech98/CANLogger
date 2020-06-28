@@ -11,6 +11,7 @@
 #include "CANSocket.h"
 #include "CANAgent.h"
 
+#define DEFAULT_BAUDRATE 100000
 
 int main()
 {
@@ -18,9 +19,8 @@ int main()
 	printf("hello from CANLogger!\n");
 	ResetLogColour();
 
-	//TODO Pass BaudRate Here?
 	//open CAN socket
-	CANSocket Socket = CANSocket();
+	CANSocket Socket = CANSocket(DEFAULT_BAUDRATE);
 
 	//Create Agent and pass it the socket and XML definitions
 	CANAgent Agent  = CANAgent(&Socket);
@@ -30,9 +30,9 @@ int main()
 
 
 	//notify socket to start reading Can Packets and hence the agent will notify the modules of packets recieved
-
+	Socket.StartCANRead();
 	
-	//TODO Decide if a tick function call is needed here
+	//TODO Decide if a tick function call is needed here if so may need to call it using a seperate thread but will need to limit the scope of what a tick function is allowed to do to read only?
 
 
 	//Close CAN Socket

@@ -79,6 +79,8 @@
   </PropertyGroup>
   <ItemGroup>
     <ClCompile Include="CANAgent.cpp" />
+    <ClCompile Include="CANChannel.cpp" />
+    <ClCompile Include="CANModule.cpp" />
     <ClCompile Include="CANSocket.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="LogColour.cpp" />
@@ -93,6 +95,8 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CANAgent.h" />
+    <ClInclude Include="CANChannel.h" />
+    <ClInclude Include="CANModule.h" />
     <ClInclude Include="CANSocket.h" />
     <ClInclude Include="LogColour.h" />
   </ItemGroup>
