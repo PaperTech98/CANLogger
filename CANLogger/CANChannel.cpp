@@ -6,13 +6,14 @@
 
 #include <string.h>
 
-CANChannel::CANChannel(can_frame frame, char* DataStrcture, char* Units, char* DataRate)
+CANChannel::CANChannel(can_frame frame)
 {
+	
 	//TODO Set Channel Name
 	//TODO Set Byte Structure Enum
-	this->Units = StringtoUnits(Units);
+	//TODO SetUnits
 	//TODO Set Data
-	this->DataRate = atoi(DataRate);
+	//TODO Set DataRate
 }
 
 /*Takes a string representing the units and returns the propper enum, not a pretty method but works so long 

@@ -1,16 +1,18 @@
 #pragma once
 
 //not ideal to include in a header file but can't forward declare enums
-#include "CANChannel.h"
+#include "CANStream.h"
+
+
 
 
 class CANAgent
 {
 public:
-	CANAgent(class CANSocket * MySocket);
+	CANAgent(class CANSocket * MySocket, const char * CANDefinitions);
 
 	//TODO return pointer to CANChannel class not return whole frame
-	bool Subscribe(char * ChannelName, void(*Notify)(CANChannel));
+	bool Subscribe(char * ChannelName, void(*Notify)(class CANChannel));
 	
 	void UnSubscribe(class CANModule * Module);
 	//TODO Unsubscribe from individual Channel
@@ -20,5 +22,9 @@ public:
 
 private: 
 	CANSocket* Socket;
+
+	//Data structure for all CAN Streams
+	CANStreamList * MyCANStreams;
+
 };
 

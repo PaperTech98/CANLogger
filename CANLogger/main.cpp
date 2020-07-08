@@ -2,16 +2,15 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-
-//#include <libxml/tree.h>
-//#include <libxml/parser.h>
-
 #include "LogColour.h"
 
 #include "CANSocket.h"
 #include "CANAgent.h"
 
+
+
 #define DEFAULT_BAUDRATE 100000
+#define XMLINTERP "Haltech_CANBus_v2.xml"
 
 int main()
 {
@@ -23,7 +22,7 @@ int main()
 	CANSocket Socket = CANSocket(DEFAULT_BAUDRATE);
 
 	//Create Agent and pass it the socket and XML definitions
-	CANAgent Agent  = CANAgent(&Socket);
+	CANAgent Agent  = CANAgent(&Socket, XMLINTERP);
 
 	//TODO
 	//Create Program Modules giving a reference to the CAN Agent to direct all CAN enquires to

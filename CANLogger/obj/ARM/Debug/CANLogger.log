@@ -4,13 +4,20 @@
   Starting remote build
   Compiling sources:
   CANAgent.cpp
+C:\Users\Samuel\source\repos\CANLogger\CANLogger\..\packages\rapidxml.1.13\\build\native\include\rapidxml\rapidxml_utils.hpp(40,20): warning : conversion from ‘std::streamoff’ {aka ‘long long int’} to ‘std::size_t’ {aka ‘unsigned int’} may change value [-Wconversion]
+C:\Users\Samuel\source\repos\CANLogger\CANLogger\..\packages\rapidxml.1.13\\build\native\include\rapidxml\rapidxml_utils.hpp(40,20): warning :              size_t size = stream.tellg();
+C:\Users\Samuel\source\repos\CANLogger\CANLogger\..\packages\rapidxml.1.13\\build\native\include\rapidxml\rapidxml_utils.hpp(40,20): warning :                     ^~~~
   CANChannel.cpp
   CANModule.cpp
   CANSocket.cpp
   main.cpp
-C:\Users\Samuel\source\repos\CANLogger\CANLogger\main.cpp(26,11): warning : variable ‘Agent’ set but not used [-Wunused-but-set-variable]
-C:\Users\Samuel\source\repos\CANLogger\CANLogger\main.cpp(26,11): warning :   CANAgent Agent  = CANAgent(&Socket);
-C:\Users\Samuel\source\repos\CANLogger\CANLogger\main.cpp(26,11): warning :            ^~~~~
+C:\Users\Samuel\source\repos\CANLogger\CANLogger\main.cpp(25,11): warning : variable ‘Agent’ set but not used [-Wunused-but-set-variable]
+C:\Users\Samuel\source\repos\CANLogger\CANLogger\main.cpp(25,11): warning :   CANAgent Agent  = CANAgent(&Socket, XMLINTERP);
+C:\Users\Samuel\source\repos\CANLogger\CANLogger\main.cpp(25,11): warning :            ^~~~~
   LogColour.cpp
+  CANStream.cpp
   Linking objects
   CANLogger.vcxproj -> C:\Users\Samuel\source\repos\CANLogger\CANLogger\bin\ARM\Debug\CANLogger.out
+  Invoking 'cp ~/projects/CANLogger/Haltech_CANBus_v2.xml ~/projects/CANLogger/bin/ARM/Debug', working directory: '/home/pi/projects/CANLogger'
+  C:\Users\Samuel\source\repos\CANLogger\CANLogger\Haltech_CANBus_v2.xml
+  1 File(s) copied

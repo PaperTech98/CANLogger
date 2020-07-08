@@ -6,10 +6,12 @@ C:\Users\Samuel\source\repos\CANLogger\CANLogger\CANModule.cpp|/home/pi/projects
 C:\Users\Samuel\source\repos\CANLogger\CANLogger\CANSocket.cpp|/home/pi/projects/CANLogger/CANSocket.cpp
 C:\Users\Samuel\source\repos\CANLogger\CANLogger\main.cpp|/home/pi/projects/CANLogger/main.cpp
 C:\Users\Samuel\source\repos\CANLogger\CANLogger\LogColour.cpp|/home/pi/projects/CANLogger/LogColour.cpp
+C:\Users\Samuel\source\repos\CANLogger\CANLogger\CANStream.cpp|/home/pi/projects/CANLogger/CANStream.cpp
 C:\Users\Samuel\source\repos\CANLogger\CANLogger\CANAgent.h|/home/pi/projects/CANLogger/CANAgent.h
 C:\Users\Samuel\source\repos\CANLogger\CANLogger\CANChannel.h|/home/pi/projects/CANLogger/CANChannel.h
 C:\Users\Samuel\source\repos\CANLogger\CANLogger\CANModule.h|/home/pi/projects/CANLogger/CANModule.h
 C:\Users\Samuel\source\repos\CANLogger\CANLogger\CANSocket.h|/home/pi/projects/CANLogger/CANSocket.h
+C:\Users\Samuel\source\repos\CANLogger\CANLogger\CANStream.h|/home/pi/projects/CANLogger/CANStream.h
 C:\Users\Samuel\source\repos\CANLogger\CANLogger\LogColour.h|/home/pi/projects/CANLogger/LogColour.h
 C:\Users\Samuel\source\repos\CANLogger\CANLogger\packages.config|/home/pi/projects/CANLogger/packages.config
 C:\Users\Samuel\source\repos\CANLogger\CANLogger\Haltech_CANBus_v2.xml|/home/pi/projects/CANLogger/Haltech_CANBus_v2.xml
