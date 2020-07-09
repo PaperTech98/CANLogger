@@ -1,11 +1,23 @@
 #pragma once
 
+#define UNUSED -1
+
 enum ByteStructure
 {
 	Range, //Range of bytes normally for a 16 bit value
 	Single, //Single Byte
 	BitRange, //Range of bits in a given Byte
 	BitSingle //Single Bit boolean
+};
+
+typedef struct ByteStructureExt ByteStructureExt;
+
+struct ByteStructureExt {
+	ByteStructure MyStructure;
+	int StartingByte;
+	int FinishingByte;
+	int StartingBit;
+	int FinishingBit;
 };
 
 enum ChannelUnits
@@ -35,7 +47,7 @@ typedef struct CANStreamList CANStreamList;
 struct CANStream {
 	char * Name;
 	int ID;
-	ByteStructure DataStructure;
+	ByteStructureExt * DataStructure;
 	ChannelUnits Units;
 	int TransmissionRate;
 };
@@ -45,6 +57,12 @@ struct CANStreamList {
 	CANStreamList * Next;
 };
 
-void AddToCANStreamList(CANStreamList * List, CANStream * ToAdd);
+
 CANStream * FindCANStreamByName(CANStreamList * List, char * name);
 void FreeCANStreamList(CANStreamList * List);
+
+
+ChannelUnits StringtoUnits(char* UnitString);
+ByteStructureExt * StringToByteStructure(char* ByteStructureString);
+
+void PrintMyDefinitions(CANStreamList * Entry);

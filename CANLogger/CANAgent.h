@@ -24,7 +24,10 @@ private:
 	CANSocket* Socket;
 
 	//Data structure for all CAN Streams
-	CANStreamList * MyCANStreams;
+	CANStreamList * MyCANStreams = nullptr;
 
+	void GetCANStreamData(char * DataName, char * Data, CANStream * DataStruct);
+
+	void AddToCANStreamList(CANStreamList * List, CANStream * ToAdd);
 };
 
