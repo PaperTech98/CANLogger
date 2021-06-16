@@ -1,0 +1,198 @@
+VERSION "Haltech V2"
+NS_ : 
+    NS_DESC_
+    CM_
+    BA_DEF_
+    BA_
+    VAL_
+    CAT_DEF_
+    CAT_
+    FILTER
+    BA_DEF_DEF_
+    EV_DATA_
+    ENVVAR_DATA_
+    SGTYPE_
+    SGTYPE_VAL_
+    BA_DEF_SGTYPE_
+    BA_SGTYPE_
+    SIG_TYPE_REF_
+    VAL_TABLE_
+    SIG_GROUP_
+    SIG_VALTYPE_
+    SIGTYPE_VALTYPE_
+    BO_TX_BU_
+    BA_DEF_REL_
+    BA_REL_
+    BA_DEF_DEF_REL_
+    BU_SG_REL_
+    BU_EV_REL_
+    BU_BO_REL_
+    SG_MUL_VAL_
+
+BS_:
+BU_:
+BO_ 864 msg_360: 8 Vector_XXX
+ SG_ RPM : 0|16@1+ (1,0) [0|65535] "RPM" Vector_XXX
+ SG_ Manifold_Pressure : 16|16@1+ (0.1,-101.3) [0|6553.5] "kPa" Vector_XXX
+ SG_ Throttle_Position : 32|16@1+ (0.1,0) [0|100] "%" Vector_XXX
+ SG_ Coolant_Pressure : 48|16@1+ (0.1,-101.3) [0|6553.5] "kPa" Vector_XXX
+
+BO_ 865 msg_361: 8 Vector_XXX
+ SG_ Fuel_Pressure : 0|16@1+ (0.1,-101.3) [0|6553.5] "kPa" Vector_XXX
+ SG_ Oil_Pressure : 16|16@1+ (0.1,-101.3) [0|6553.5] "kPa" Vector_XXX
+ SG_ Accelerator_Pedal_Pos : 32|16@1+ (0.1,0) [0|100] "%" Vector_XXX
+ SG_ Wastegate_Pressure : 48|16@1+ (0.1,-101.3) [0|65535] "kPa" Vector_XXX
+
+BO_ 866 msg_362: 8 Vector_XXX
+ SG_ Injector_Duty_Cycle_Primary : 0|16@1+ (0.1,0) [0|100] "%" Vector_XXX
+ SG_ Injector_Duty_Cycle_Secondary : 16|16@1+ (0.1,0) [0|100] "%" Vector_XXX
+ SG_ Ignition_Angle_Leading : 32|16@1+ (0.1,0) [-360|360] "deg" Vector_XXX
+ SG_ Ignition_Angle_Trailing : 48|16@1+ (0.1,0) [-360|360] "deg" Vector_XXX
+
+BO_ 867 msg_363: 8 Vector_XXX
+ SG_ Wheel_Slip : 0|16@1+ (0.1,0) [0|65535] "km/h" Vector_XXX
+ SG_ Wheel_Diff : 16|16@1+ (0.1,0) [0|65535] "km/h" Vector_XXX
+ SG_ Engine_Acceleration : 32|16@1+ (1,0) [0|65535] "RPM/s" Vector_XXX
+ SG_ Manifold_Pressure_2 : 48|16@1+ (0.1,-101.3) [0|6553.5] "kPa" Vector_XXX
+
+BO_ 872 msg_368: 8 Vector_XXX
+ SG_ Lambda_1 : 0|16@1+ (0.001,0) [0|65.535] "λ" Vector_XXX
+ SG_ Lambda_2 : 16|16@1+ (0.001,0) [0|65.535] "λ" Vector_XXX
+ SG_ Lambda_3 : 32|16@1+ (0.001,0) [0|65.535] "λ" Vector_XXX
+ SG_ Lambda_4 : 48|16@1+ (0.001,0) [0|65.535] "λ" Vector_XXX
+
+BO_ 873 msg_369: 8 Vector_XXX
+ SG_ Miss_Count : 0|16@1+ (1,0) [0|65535] "" Vector_XXX
+ SG_ Trigger_Counter : 16|16@1+ (1,0) [0|65535] "" Vector_XXX
+ SG_ Home_Counter : 32|16@1+ (1,0) [0|65535] "" Vector_XXX
+ SG_ Triggers_Since_Last_Home : 48|16@1+ (1,0) [0|65535] "" Vector_XXX
+
+BO_ 874 msg_36A: 8 Vector_XXX
+ SG_ Knock_Level_Logged : 0|16@1+ (1,0) [0|65535] "" Vector_XXX
+ SG_ Knock_Level_Logged_2 : 16|16@1+ (1,0) [0|65535] "" Vector_XXX
+ SG_ Knock_Retard_Bank_1 : 32|16@1+ (0.1,0) [0|6553.5] "deg" Vector_XXX
+ SG_ Knock_Retard_Bank_2 : 48|16@1+ (0.1,0) [0|6553.5] "deg" Vector_XXX
+
+BO_ 875 msg_36B: 8 Vector_XXX
+ SG_ Brake_Pressure : 0|16@1+ (1,-101.3) [0|65535] "kPa" Vector_XXX
+ SG_ NOS_Pressure : 16|16@1+ (1,-101.3) [0|65535] "kPa" Vector_XXX
+ SG_ Turbo_Speed_Sensor : 32|16@1+ (1,0) [0|65535] "RPM" Vector_XXX
+ SG_ G_Sensor : 48|16@1+ (0.1,-101.3) [0|65535] "TBC" Vector_XXX
+
+BO_ 876 msg_36C: 8 Vector_XXX
+ SG_ Wheelspeed_Front_Left : 0|16@1+ (0.1,0) [0|6553.5] "km/h" Vector_XXX
+ SG_ Wheelspeed_Front_Right : 16|16@1+ (0.1,0) [0|6553.5] "km/h" Vector_XXX
+ SG_ Wheelspeed_Rear_Left : 32|16@1+ (0.1,0) [0|6553.5] "km/h" Vector_XXX
+ SG_ Wheelspeed_Rear_Right : 48|16@1+ (0.1,0) [0|6553.5] "km/h" Vector_XXX
+
+BO_ 877 msg_36D: 8 Vector_XXX
+ SG_ Wheelspeed_Front : 0|16@1+ (0.1,0) [0|6553.5] "km/h" Vector_XXX
+ SG_ Wheelspeed_Rear : 16|16@1+ (0.1,0) [0|6553.5] "km/h" Vector_XXX
+ SG_ Exhaust_Cam_Angle_1 : 32|16@1+ (0.1,0) [0|6553.5] "deg" Vector_XXX
+ SG_ Exhaust_Cam_Angle_2 : 48|16@1+ (0.1,0) [0|6553.5] "deg" Vector_XXX
+
+BO_ 878 msg_36E: 8 Vector_XXX
+ SG_ Fuel_Cut_Percentage : 0|16@1+ (0.1,0) [0|100.0] "%" Vector_XXX
+ SG_ Launch_Control_Ign_Retard : 16|16@1+ (0.1,0) [0|6553.5] "deg" Vector_XXX
+ SG_ Launch_Control_Fuel_Enrich : 32|16@1+ (0.1,0) [0|6653.5] "deg" Vector_XXX
+ SG_ Reserved_1 : 48|8@1+ (1,0) [0|65535] "" Vector_XXX
+ SG_ Reserved_2 : 56|8@1+ (1,0) [0|65535] "" Vector_XXX
+
+BO_ 879 msg_36F: 8 Vector_XXX
+ SG_ Reserved_3 : 0|8@1+ (1,0) [0|65535] "" Vector_XXX
+ SG_ Reserved_4 : 8|8@1+ (1,0) [0|65535] "" Vector_XXX
+ SG_ Boost_Control_Output : 16|16@1+ (0.1,0) [0|100] "%" Vector_XXX
+ SG_ Timed_Duty_Output_Duty_1 : 32|16@1+ (0.1,0) [0|100] "%" Vector_XXX
+ SG_ Timed_Duty_Output_Duty_2 : 48|16@1+ (0.1,0) [0|100] "%" Vector_XXX
+
+BO_ 880 msg_370: 8 Vector_XXX
+ SG_ Wheelspeed_General : 0|16@1+ (0.1,0) [0|6553.5] "km/h" Vector_XXX
+ SG_ Gear : 16|16@1+ (1,0) [0|65535] "gear" Vector_XXX
+ SG_ Intake_Cam_Angle_1 : 32|16@1+ (0.1,0) [0|6553.5] "deg" Vector_XXX
+ SG_ Intake_Cam_Angle_2 : 48|16@1+ (0.1,0) [0|6553.5] "deg" Vector_XXX
+
+BO_ 881 msg_371: 8 Vector_XXX
+ SG_ Fuel_Flow : 0|16@1+ (1,0) [0|65535] "ml/minute" Vector_XXX
+ SG_ Fuel_Flow_Return : 16|16@1+ (1,0) [0|65535] "ml/minute" Vector_XXX
+ SG_ Fuel_Flow_Differential : 32|16@1+ (1,0) [0|66535] "ml/minute" Vector_XXX
+ SG_ Reserved_5 : 48|8@1+ (1,0) [0|65535] "" Vector_XXX
+ SG_ Reserved_6 : 56|8@1+ (1,0) [0|65535] "" Vector_XXX
+
+BO_ 882 msg_372: 8 Vector_XXX
+ SG_ Battery_Voltage : 0|16@1+ (0.1,0) [0|6553.5] "Volts" Vector_XXX
+ SG_ Air_Temp_Sensor_2 : 16|16@1+ (0.1,-273.15) [0|6553.5] "C" Vector_XXX
+ SG_ Target_Boost_Level : 32|16@1+ (0.1,-101.3) [0|6553.5] "kPa" Vector_XXX
+ SG_ Barometric_Pressure : 48|16@1+ (0.1,-101.3) [0|6553.5] "kPa" Vector_XXX
+
+BO_ 883 msg_373: 8 Vector_XXX
+ SG_ EGT_1 : 0|16@1+ (0.1,-273.15) [0|6553.5] "C" Vector_XXX
+ SG_ EGT_2 : 16|16@1+ (0.1,-273.15) [0|6553.5] "C" Vector_XXX
+ SG_ EGT_3 : 32|16@1+ (0.1,-273.15) [0|6553.5] "C" Vector_XXX
+ SG_ EGT_4 : 48|16@1+ (0.1,-273.15) [0|6553.5] "C" Vector_XXX
+
+BO_ 884 msg_374: 8 Vector_XXX
+ SG_ EGT_5 : 0|16@1+ (0.1,-273.15) [0|6553.5] "C" Vector_XXX
+ SG_ EGT_6 : 16|16@1+ (0.1,-273.15) [0|6553.5] "C" Vector_XXX
+ SG_ EGT_7 : 32|16@1+ (0.1,-273.15) [0|6553.5] "C" Vector_XXX
+ SG_ EGT_8 : 48|16@1+ (0.1,-273.15) [0|6553.5] "C" Vector_XXX
+
+BO_ 885 msg_375: 8 Vector_XXX
+ SG_ EGT_9 : 0|16@1+ (0.1,-273.15) [0|6553.5] "C" Vector_XXX
+ SG_ EGT_10 : 16|16@1+ (0.1,-273.15) [0|6553.5] "C" Vector_XXX
+ SG_ EGT_11 : 32|16@1+ (0.1,-273.15) [0|6553.5] "C" Vector_XXX
+ SG_ EGT_12 : 48|16@1+ (0.1,-273.15) [0|6553.5] "C" Vector_XXX
+
+BO_ 992 msg_3E0: 8 Vector_XXX
+ SG_ Coolant_Temp : 0|16@1+ (0.1,-273.15) [0|6553.5] "C" Vector_XXX
+ SG_ Air_Temp : 16|16@1+ (0.1,-273.15) [0|6553.5] "C" Vector_XXX
+ SG_ Fuel_Temp : 32|16@1+ (0.1,-273.15) [0|6553.5] "C" Vector_XXX
+ SG_ Oil_Temp : 48|16@1+ (0.1,-273.15) [0|6553.5] "C" Vector_XXX
+
+BO_ 993 msg_3E1: 8 Vector_XXX
+ SG_ Transmission_Oil_Temp : 0|16@1+ (0.1,-273.15) [0|6553.5] "C" Vector_XXX
+ SG_ Diff_Oil_Temp : 16|16@1+ (0.1,-273.15) [0|6553.5] "C" Vector_XXX
+ SG_ Fuel_Composition : 32|16@1+ (0.1,0) [0|100] "%" Vector_XXX
+ SG_ Reserved_7 : 48|16@1+ (1,0) [0|65535] "" Vector_XXX
+
+BO_ 994 msg_3E2: 8 Vector_XXX
+ SG_ Reserved_Fuel_Level : 0|16@1+ (1,0) [0|65535] "" Vector_XXX
+ SG_ Fuel_Consumption_Rate : 16|16@1+ (0.01,0) [0|655.35] "L/h" Vector_XXX
+ SG_ Average_Fuel_Economy : 32|16@1+ (0.1,0) [0|100] "L/100km" Vector_XXX
+ SG_ Reserved_Distance_To_Empty : 48|16@1+ (1,0) [0|65535] "km" Vector_XXX
+
+BO_ 995 msg_3E3: 8 Vector_XXX
+ SG_ Fuel_Trim_Short_Term_Bank_1 : 0|16@1+ (0.1,0) [0|100] "%" Vector_XXX
+ SG_ Fuel_Trim_Short_Term_Bank_2 : 16|16@1+ (0.1,0) [0|100] "%" Vector_XXX
+ SG_ Fuel_Trim_Long_Term_Bank_1 : 32|16@1+ (0.1,0) [0|100] "%" Vector_XXX
+ SG_ Fuel_Trim_Long_Term_Bank_2: 48|16@1+ (0.1,0) [0|100] "%" Vector_XXX
+
+BO_ 996 msg_3E4: 8 Vector_XXX
+ SG_ Reserved_8 : 0|8@1+ (1,0) [0|65535] "" Vector_XXX
+ SG_ NOS_Switch : 8|1@1+ (1,0) [0|1] "on" Vector_XXX
+ SG_ NOS_Active : 9|1@1+ (1,0) [0|1] "on" Vector_XXX
+ SG_ Gear_Switch_State : 10|1@1+ (1,0) [0|1] "on" Vector_XXX
+ SG_ Decel_Cut : 11|1@1+ (1,0) [0|1] "cut" Vector_XXX
+ SG_ Transient_Throttle_Active : 12|1@1+ (1,0) [0|1] "on" Vector_XXX
+ SG_ Brake_Pedal_On : 13|1@1+ (1,0) [0|1] "on" Vector_XXX
+ SG_ Clutch_Switch : 14|1@1+ (1,0) [0|1] "pressed" Vector_XXX
+ SG_ Reserved_9 : 15|1@1+ (1,0) [0|1] "" Vector_XXX
+ SG_ Antilag_Launch_On : 16|1@1+ (1,0) [0|1] "on" Vector_XXX
+ SG_ Antilag_Launch_Switch_On : 17|1@1+ (1,0) [0|1] "on" Vector_XXX
+ SG_ Aux_Rev_Limiter_Switch : 18|1@1+ (1,0) [0|1] "on" Vector_XXX
+ SG_ Rally_Anti_Lag_Switch : 19|1@1+ (1,0) [0|1] "on" Vector_XXX
+ SG_ Flat_Shift_State : 20|1@1+ (1,0) [0|1] "on" Vector_XXX
+ SG_ Timed_Duty_Output_Active : 21|1@1+ (1,0) [0|1] "on" Vector_XXX
+ SG_ Torgque_Reduction_Active : 22|1@1+ (1,0) [0|1] "on" Vector_XXX
+ SG_ Torque_Reduction_Cut_Active : 23|1@1+ (1,0) [0|1] "on" Vector_XXX
+ SG_ Reserved_10 : 24|8@1+ (1,0) [0|1] "" Vector_XXX
+ SG_ Reserved_11 : 32|8@1+ (1,0) [0|1] "" Vector_XXX
+ SG_ Reserved_12 : 40|8@1+ (1,0) [0|1] "" Vector_XXX
+ SG_ Reserved_13 : 48|8@1+ (1,0) [0|1] "" Vector_XXX
+ SG_ MIL_Check_Engine_Light : 56|1@1+ (1,0) [0|1] "on" Vector_XXX
+ SG_ Battery_Light : 57|1@1+ (1,0) [0|1] "on" Vector_XXX
+ SG_ Limp_Mode_Active : 58|1@1+ (1,0) [0|1] "on" Vector_XXX
+ SG_ Left_Indicator : 59|1@1+ (1,0) [0|1] "on" Vector_XXX
+ SG_ Right_Indicator : 60|1@1+ (1,0) [0|1] "on" Vector_XXX
+ SG_ High_Beam_Indicator : 61|1@1+ (1,0) [0|1] "on" Vector_XXX
+ SG_ Hand_Brake_Indicator : 62|1@1+ (1,0) [0|1] "on" Vector_XXX
+ SG_ Reserved_14 : 63|1@1+ (1,0) [0|1] "" Vector_XXX

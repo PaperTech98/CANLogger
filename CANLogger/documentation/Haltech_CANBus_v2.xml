@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--TODO Populate this document... will not be fun-->
+
+<CANData>
+  
+  <RPM>
+    <ID>360</ID>
+    <Structure>0-1</Structure>
+    <Units>RPM</Units>
+    <Rate>50Hz</Rate>
+  </RPM>
+
+  <Manifold_Pressure>
+    <ID>360</ID>
+    <Structure>2-3</Structure>
+    <Units>0.1kPa</Units>
+    <Rate>50Hz</Rate>
+  </Manifold_Pressure>
+
+  <Throttle_Position>
+    <ID>360</ID>
+    <Structure>4-5</Structure>
+    <Units>0.1%</Units>
+    <Rate>50Hz</Rate>
+  </Throttle_Position>
+
+  <Coolant_Pressure>
+    <ID>360</ID>
+    <Structure>6-7</Structure>
+    <Units>0.1kPa</Units>
+    <Rate>50Hz</Rate>
+  </Coolant_Pressure>
+  
+</CANData>
